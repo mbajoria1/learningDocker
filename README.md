@@ -40,3 +40,20 @@ Docker registry is a cloud space where images are maintained and stored. If no p
 But this is public registry. Likewise docker's own , there is google's public registry as well gcr.io where kubernetes images are available. 
 One can create its own private registry as well and to access that, you need to first login using `docker login` command. When you create an account in AWS of GCP (Google cloud), they by default provide a registry to maintain images. 
 
+Deploy private registry:
+
+Docker registry docker.io is itself a image called registry. If we want to run an instance of the private registry tin local then execute below command:
+`Docker run -d --name registry -p 5000:5000 registry:2 ` - will run and deploy private registry to port 5000 on docker host.
+
+Tagging your own image to docker registry by using Docker image tag command and attach the image to private registry url:
+` Docker image tag my-image localhost:5000/my-image `
+Pushing the image to local private registry:
+`docker push localhost:5000/my-image`
+Pulling image from same host or different host:
+`Docker pull localhost:5000/my-image` or `Docker pull 192.168.56.100:5000/my-image `
+
+
+
+
+
+
