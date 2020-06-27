@@ -33,3 +33,10 @@ custom-isolated-network
 `docker inspect containerid` -> to verify a container's network details.
 
 Embedded DNS server: Docker has DNS server running on ip 127.0.0.11. Every container has a container name which can be used to resolve a container by embedded DNS. So if a webserver wants to connect to a mysql container, it can does to by container name and in turn it uses DNS to resolve the ip address using DNS server.
+
+**Docker Registry**
+Docker registry is a cloud space where images are maintained and stored. If no path is mentioned specifically by default registry is docker.io. For example if you are pulling a nginx image then actully path is: docker.io/nginx/nginx : here 1st nginx is user account, 2nd is image name. 
+
+But this is public registry. Likewise docker's own , there is google's public registry as well gcr.io where kubernetes images are available. 
+One can create its own private registry as well and to access that, you need to first login using `docker login` command. When you create an account in AWS of GCP (Google cloud), they by default provide a registry to maintain images. 
+
