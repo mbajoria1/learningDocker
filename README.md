@@ -53,7 +53,16 @@ Pulling image from same host or different host:
 `Docker pull localhost:5000/my-image` or `Docker pull 192.168.56.100:5000/my-image `
 
 
+**Docker install on windows can be done through 2 ways:**
+1. Docker toolbox - Toolbox consists of Oracle virtual box, A linux system and a docker on that linux system. Docker toolbox does nothing but
+installs a virutal linux system on your windows machine so that it can support linux images to run. Windows 7 , 64 bit system is required for Docker toolbox.
+2. Docker Desktop - Docker toolbox is legacy system and is required for older windows. Docker desktop is similar but it uses Microsoft hiper-v for virualization instead of oracle virtual box. MS hiper-v is only supported by windows enterprise version or professional version as they come with by default hiper-v support. 
 
+Now above options supports running linux containers on windows host machine. Windows server 2016 support windows containers. 
 
+Windows containers are of two types:
+
+1. Windows server (OS kernel is shared between containers)
+2. Hiper-v isolation where a highly optimized OS is created or each container and each container uses its own share of OS. 
 
 
