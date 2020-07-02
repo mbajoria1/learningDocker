@@ -11,17 +11,19 @@ There are three types of docker networks -
   2. None network - docker run --network=none ubuntu
   3. host network - docker run --network=host ubuntu
 
-### **Bridge Network**
+<br/> 
+
+### **Bridge Network:**
 
 - When a docker container is created without specifying any particular network, its assigned under default network which is bridge network.This is private internal network on docker host in range of **172.17...** series.
 
 - Containers within bridge network can talk to each other using internal ip address. If these containers were to be accessed by outside bridge network then that can be done by mapping its port to any of the docker host port(port for machine on which docker is running) by using **-p option**. Another way is to associate a host port with the container.
 
-### **none network:** 
+### **`none` network:** 
 
 - When a container is created with none, its not associated with any network and it cannot be accessed by anyone , or it cannot access any other container. They run in an isolated network.
 
-### **host network:**
+### **`host` network:**
 
 - Container created with host option is hosted on a host network not docker internal network. Like a container can be hosted on 5000 port on host network. This way without port mapping container can be accessed by outside networks.
 
