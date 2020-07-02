@@ -43,12 +43,12 @@ There are three types of docker networks -
 >
 > - By default docker will create one bridge network but we can create another one using below command :
 >
->  ```
->    docker network create 
->    --driver bridge 
->    --subnet 182.18.0.0/16
->    custom-isolated-network
->  ```
+>   ```
+>     docker network create 
+>     --driver bridge 
+>     --subnet 182.18.0.0/16
+>     custom-isolated-network
+>   ```
 >
 >  - List networks: `docker network ls` 
 >  - Inspect a container's network:`docker inspect containerid`
