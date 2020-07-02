@@ -25,7 +25,7 @@ There are three types of docker networks -
 
 ### **`none` network:** 
 
-- When a container is created with none, its not associated with any network and it cannot be accessed by anyone , or it cannot access any other container. They run in an isolated network.
+- When a container is created with `none`, its not associated with any network. Neither it can be accessed by anyone, nor can it access any other container. They run in an isolated network.
 
   ```
     docker run --network=none ubuntu
@@ -33,7 +33,7 @@ There are three types of docker networks -
 
 ### **`host` network:**
 
-- Container created with host option is hosted on a host network not docker internal network. Like a container can be hosted on 5000 port on host network. This way without port mapping container can be accessed by outside networks.
+- Container created with `host` option is hosted on a host network not docker internal network. Like a container can be hosted on 5000 port on host network. This way without port mapping container can be accessed by outside networks.
 
   ```
     docker run --network=host ubuntu
@@ -42,21 +42,16 @@ There are three types of docker networks -
 > **Note** : 
 >
 > - By default docker will create one bridge network but we can create another one using below command :
-
-<br/>
-
-## Creating a Docker network 
-
-  ```
-    docker network create 
-    --driver bridge 
-    --subnet 182.18.0.0/16
-    custom-isolated-network
-  ```
-
-  `docker network ls` -> list networks.
-
-  `docker inspect containerid` -> verify a container's network details.
+>
+>  ```
+>    docker network create 
+>    --driver bridge 
+>    --subnet 182.18.0.0/16
+>    custom-isolated-network
+>  ```
+>
+>  - List networks: `docker network ls` 
+>  - Inspect a container's network:`docker inspect containerid`
 
 <br/>
 
