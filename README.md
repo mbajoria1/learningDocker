@@ -1,13 +1,15 @@
-# learningDocker
-Docker concepts
+# Learning Docker
+> Docker concepts
+
+<br/>
 
 ## Docker Networks
 
-There are three types of docker networks.
+There are three types of docker networks -
 
-1. Bridge network(default) - docker run ubuntu
-2. None network - docker run --network=none ubuntu
-3. host network - docker run --network=host ubuntu
+  1. Bridge network(default) - docker run ubuntu
+  2. None network - docker run --network=none ubuntu
+  3. host network - docker run --network=host ubuntu
 
 ### **Bridge Network**
 
@@ -27,16 +29,20 @@ There are three types of docker networks.
 >
 > - By default docker will create one bridge network but we can create another one using below command :
 
-```
-docker network create 
---driver bridge 
---subnet 182.18.0.0/16
-custom-isolated-network
-```
+<br/>
 
-`docker network ls` -> list networks.
+## Creating a Docker network 
 
-`docker inspect containerid` -> verify a container's network details.
+  ```
+    docker network create 
+    --driver bridge 
+    --subnet 182.18.0.0/16
+    custom-isolated-network
+  ```
+
+  `docker network ls` -> list networks.
+
+  `docker inspect containerid` -> verify a container's network details.
 
 <br/>
 
@@ -81,6 +87,7 @@ custom-isolated-network
     docker pull 192.168.56.100:5000/my-image 
   ```
 
+<br/>
 
 ## Docker install on windows 
 
