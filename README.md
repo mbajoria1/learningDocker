@@ -38,7 +38,7 @@ Docker is a application build, ship & run tool which allows to write, build & de
 - provides help related to different docker commands. 
 
 ```Docker container ls```
-- provides list of containers
+- provides list of running containers, to get all containers append the command with option `-a`
 
 ```Docker image ls```
 - provides list of images
@@ -56,10 +56,37 @@ Docker is a application build, ship & run tool which allows to write, build & de
 - remove image from local
 
 ```docker container run -d --name web -P jboss/wildfly```
+
 - pulls jboss/wildfly image, runs it on docker host with a name web and map the port to local host in a default port. 
+
 ```docker container run -d --name web -p 8080:8080 jboss/wildfly```
+
 - same as before but maps to localhost & port 8080
 
+``` docker-machine ip ```
+- For Windows running docker machine, web application rest endpoints are not accessible on localhost. We need to use docker machine ip. Above command helps getting the same.
+
+> Similar to port mapping, volume mapping can also be done where we can store files in our local machine instead of container memory which will delete once container is deleted or crashes.
+
+``` docker image build -t hellojava .``` 
+
+- here -t is used to provide a tag name to the image and '.' is here our build context.
+
+###  Docker build commands in `Dockerfile` : 
+
+* `COPY` is used to copy files or directories from local machine to docker container.
+
+* `ADD` is copy instruction and additionally it auto extracts tar files to image
+
+* `RUN`  is used for installing softwares or update them. You may also run some scripts using run command, the things we want to just once.
+* `CMD` - default for executing a container. One `Dockerfile` can contain multiple CMD commands but only the last one will always execute. 
+* `ENTRYPOINT` - 
+default value for entrypoint is  /bin/sh -c . We can override it to run a script file to configure the container executables. 
+Example: ENTRYPOINT ["/entrypoint.sh"]
+
+*  `EXPOSE` - network ports on which the container is listening. Expl - EXPOSE 9990 . This is separate from host port mapping.
+*  `VOLUME` - create a mount point with the specified name.
+*  `HEALTHCHECK`  - healthcheck instructions can be added.  
 
 <br/>
 
