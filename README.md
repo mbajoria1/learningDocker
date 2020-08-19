@@ -55,12 +55,10 @@ Docker is a application build, ship & run tool which allows to write, build & de
 ```docker rmi imageid```
 - remove image from local
 
-``` docker container run -d --name web -P jboss/wildfly
-```
-pulls jboss/wildfly image, runs it on docker host with a name web and map the port to local host in a default port. 
-``` docker container run -d --name web -p 8080:8080 jboss/wildfly
-```
-same as before but maps to localhost & port 8080
+```docker container run -d --name web -P jboss/wildfly```
+- pulls jboss/wildfly image, runs it on docker host with a name web and map the port to local host in a default port. 
+```docker container run -d --name web -p 8080:8080 jboss/wildfly```
+- same as before but maps to localhost & port 8080
 
 
 <br/>
