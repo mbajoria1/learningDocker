@@ -4,22 +4,31 @@
 
 Docker is a application build, ship & run tool which allows to write, build & deploy application faster. 
 
-* Docker Client 
+### Docker Client 
 
       1. Helps to build, pull & run images
       2. Build, Pull, run commands does nothing but calls rest apis hosted on docker host.
       3. Client is stateless, state is maintained at docker host.
-* Docker Host 
+      
+### Docker Host 
 
       1. Is the hosting application which has images & containers running on it. 
       2. It also has a Docker Daemon which keeps listening to incoming requests and serve to it.
       3. Docker host upon getting request to run an image, checks if image is present in local, if not present it pulls the image from docker hub registry. All this happends     
       behind the scene, as a developer we dont need to worry about it. 
       4. We can have docker host clusters insead of a single docker host to avoid single point of failure.
-* Docker Registry
+### Docker Registry
 
       1. Docker trusted registry can be used to store images.
       2. We also have docker hub registry where anyone can store & pull images from.
+      
+### Basic Docker Commands:
+
+`Docker --version`  - to check docker version
+`Docker info`  - provides information about docker environment
+`Docker version`  - provides client & server(Docker host) details
+`Docker help` - provides help related to different docker commands. 
+
 <br/>
 
 ## Docker Networks
