@@ -104,7 +104,7 @@ Sample Docker compose file:
 
 For multiple services:
 
-![dockercomposeMultipleServices](https://github.com/mbajoria1/learningDocker/blob/master/dockerCompose.yml.png) 
+![dockercomposeMultipleServices](https://github.com/mbajoria1/learningDocker/blob/master/Multicontainer%20docker-compose.yml%20file.png) 
 
 ```docker-compose up -d``` 
 - to execute instructions and startup all the services.
