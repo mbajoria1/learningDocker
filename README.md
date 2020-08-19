@@ -93,7 +93,7 @@ Example: ENTRYPOINT ["/entrypoint.sh"]
 io.fabric8 groupid
 
 Github link for docker maven plugin which can builds, deploy, run your docker image as part of maven goals. 
-![](https://github.com/fabric8io/docker-maven-plugin) 
+! (https://github.com/fabric8io/docker-maven-plugin) 
 
 ## Docker Networks
 
