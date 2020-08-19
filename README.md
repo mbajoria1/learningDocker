@@ -99,9 +99,16 @@ Github link for docker maven plugin which can builds, deploy, run your docker im
 For running a multicontainer application in docker, we can use dockercompose.yml file. DockerCompose file is a file which contains sequential instructions that we can execute through docker client as one single script type file instead of running the instructions manually one by one. 
 
 Sample Docker compose file:
+
 ![dockercompose file](https://github.com/mbajoria1/learningDocker/blob/master/dockerCompose.yml.png) 
 
+For multiple services:
 
+![dockercomposeMultipleServices](https://github.com/mbajoria1/learningDocker/blob/master/dockerCompose.yml.png) 
+
+```docker-compose up -d``` 
+- to execute instructions and startup all the services.
+``` docker-compose down```  - remove all containers and bring down all the services, also removes network if created any.
 
 ## Docker Networks
 
