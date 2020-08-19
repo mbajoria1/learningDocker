@@ -25,25 +25,34 @@ Docker is a application build, ship & run tool which allows to write, build & de
       
 ### Basic Docker Commands:
 
-`Docker --version`  
+```Docker --version```  
 - to check docker version
-`Docker info`  
+
+```Docker info```  
 - provides information about docker environment
-`Docker version`  
+
+```Docker version```  
 - provides client & server(Docker host) details
-`Docker help` 
+
+```Docker help``` 
 - provides help related to different docker commands. 
-`Docker container ls`
+
+```Docker container ls```
 - provides list of containers
-`Docker image ls`
+
+```Docker image ls```
 - provides list of images
-`docker container run -it nginx`
+
+```docker container run -it nginx```
 - run docker image in background mode/interactive mode
-`docker container stop containerID or containerName` 
+
+```docker container stop containerID or containerName```
 - stop a running container
-`docker rm contained id`
+
+```docker rm contained id```
 - remove container from docker host
-`docker rmi imageid`
+
+```docker rmi imageid```
 - remove image from local
 
 
